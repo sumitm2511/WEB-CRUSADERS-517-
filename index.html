@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list app</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="todo_app">
+        <h2>To-Do List <img src="images/Untitled design (1).png" alt=""></h2>
+        <div class="row">
+            <input type="text" id="input-box" placeholder="Add your text">
+            <select  id="priority-selector">
+                <option value="low">LOW</option>
+                <option value="medium">MEDIUM</option>
+                <option value="high">HIGH</option>
+            </select>
+            <input type="date" id="due-date" >
+            <span id="due-date-icon" onclick="openDatePicker()">📅</span>
+            <button onclick="addtask()">ADD</button>
+            <button onclick="showSortOptions()">Sort</button>
+            <div id="sort-options" class="sort-options" style="display: none;">
+                <label for="sort-select">Sort by:</label>
+                <select id="sort-select" onchange="sortTasks()">
+                    <option value="priority">Priority</option>
+                    <option value="due-date">Due-Date</option>
+                </select>
+            </div>
+
+        </div>
+        <ul id="list-container">
+            <!-- <li class="checked">1</li>
+            <li>2</li>
+            <li>3</li> -->
+        </ul>
+    </div>
+   
+</div>
+   <script src="script.js"></script> 
+</body>
+</html> 
